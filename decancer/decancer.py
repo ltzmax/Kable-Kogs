@@ -150,6 +150,7 @@ class Decancer(commands.Cog):
         """
         if ctx.invoked_subcommand:
             return
+        guild = ctx.guild
         data = await self.config.guild(ctx.guild).all()
         channel = ctx.guild.get_channel(data["modlogchannel"])
         name = data["new_custom_nick"]
