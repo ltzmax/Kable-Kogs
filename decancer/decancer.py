@@ -175,7 +175,7 @@ class Decancer(commands.Cog):
             value="\n".join(values),
         )
         e.set_footer(text="To change these, pass [p]decancerset modlog|defaultname")
-        e.set_image(url=ctx.guild.icon_url)
+        e.set_image(url=str(guild.icon.with_static_format("png")))
         try:
             await ctx.send(embed=e)
         except Exception:
